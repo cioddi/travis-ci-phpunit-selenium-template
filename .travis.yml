@@ -1,0 +1,13 @@
+language: php
+php:
+  - 5.3
+
+before_script:
+  - ./tests/setup/before_script.sh
+  - ./tests/setup/apache.sh
+  - ./tests/setup/selenium.sh
+
+script: phpunit --verbose -c tests/phpunit.xml
+notifications:
+  email:
+    - maxtobiasweber@gmail.com
